@@ -5,7 +5,7 @@ class DepartmentsController < ApplicationController
 
   def fix
     puts @department
-    json_response(department: fix_department[@department])
+    json_response(input_department: @department, fixed_department: fix_department)
   end
 
   private
@@ -17,11 +17,12 @@ class DepartmentsController < ApplicationController
   def fix_department
     # Key: input department name
     # Value: fixed department name
-    {
+    options = {
       'Barranquilla D.E.' => 'Atlántico',
       'Bogotá D.C.' => 'Cundinamarca',
       'Cartagena D.T. y C.' => 'Bolivar',
       'Santa Marta D.T. y C.' => 'Magdalena'
     }
+    options[@department] || @department
   end
 end
