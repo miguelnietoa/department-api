@@ -5,7 +5,7 @@ class DepartmentsController < ApplicationController
 
   def fix
     puts @department
-    render json: { department: fix_department[@department] }, status: :ok
+    json_response(department: fix_department[@department])
   end
 
   private
