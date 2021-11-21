@@ -20,7 +20,7 @@ class DepartmentsController < ApplicationController
     options = {
       'Barranquilla D.E.' => 'Atlántico',
       'Bogotá D.C.' => 'Cundinamarca',
-      'Cartagena D.T. y C.' => 'Bolivar',
+      'Cartagena D.T. y C.' => 'Bolívar',
       'Santa Marta D.T. y C.' => 'Magdalena'
     }
     options[@department] || @department
